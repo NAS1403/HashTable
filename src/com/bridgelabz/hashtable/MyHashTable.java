@@ -1,5 +1,6 @@
 package com.bridgelabz.hashtable;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class MyHashTable<K,V> {
 
@@ -29,6 +30,14 @@ public class MyHashTable<K,V> {
         MyMapNode<K,V> myMapNode = linkedList.search(key);
         return (myMapNode == null)? null : myMapNode.value;
     }
+
+    public void remove(K key){
+        int index = getIndex(key);
+       LinkedList<K,V> list =  bucketList.get(index);
+        list.delete(key);
+    }
+
+
 
     public void add(K key, V value){
         int index = getIndex(key);
