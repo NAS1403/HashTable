@@ -16,7 +16,11 @@ public class MainClass {
                 value = value+1;
             hashTable.add(word,value);
         }
-//        System.out.println(hashTable);
+
+        hashTable.print();
+        System.out.println();
+
+        hashTable.remove("avoidable");
         hashTable.print();
     }
 }
